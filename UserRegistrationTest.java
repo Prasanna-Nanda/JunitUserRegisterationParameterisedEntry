@@ -22,4 +22,11 @@ public class UserRegistrationTest {
         boolean lastNameResult = UserRegistration.lastNameValidation("Prasanna Nanda");
         assertEquals(true, lastNameResult);
     }
+
+    @Test
+    public void  userEmailTest(){
+        boolean emailResult=UserRegistration.emailValidation("abc.xyz@bl.co.in");
+        assertEquals(true, emailResult);
+    }
+
 }
