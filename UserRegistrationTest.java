@@ -1,4 +1,10 @@
+import UserRegistration.UserRegistration;
 import org.junit.Test;
+
+import java.util.Scanner;
+
+import static org.junit.Assert.*;
+
 
 import static org.junit.Assert.assertSame;
 
@@ -88,6 +94,79 @@ public class UserRegistrationTest {
         String userValidation=userRegistration.userEntryValidation(firstName,lastName,emailId,mobileNumber,password);
         assertEquals("happy", userValidation);
     }
+     @Test
+    public void NameTest() {
+            try {
+            try {
+                ParameterisedEntry name = new ParameterisedEntry();
+                boolean output = name.name1("Bells");
+                assertTrue(output);
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
+        } catch (InvalidInputException e) {
+            e.printStackTrace();
+        }
+    }
 
+    @Test
+    public void EmailIdTest() {
+        try
+        {    try
+        {
+            ParameterisedEntry newEmail = new ParameterisedEntry();
+            boolean output = newEmail.email1("abc1234@gmail.com");
+            assertTrue(output);
+        }
+        catch (NullPointerException e)
+        {
+            e.printStackTrace();
+        }
+        }
+        catch(InvalidInputException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void  MobileTest(){
+        try
+        {    try
+        {
+            ParameterisedEntry phoneNumber = new ParameterisedEntry();
+            boolean output = phoneNumber.mobileNumber1("91 1204356789");
+            assertTrue(output);
+        }
+        catch (NullPointerException e)
+        {
+            e.printStackTrace();
+        }
+        }
+        catch(InvalidInputException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void  PasswordTest(){
+        try
+        {    try
+        {
+            ParameterisedEntry passWord = new ParameterisedEntry();
+            boolean output = passWord.password1("Thomas#2@87B");
+            assertTrue(output);
+        }
+        catch (NullPointerException e)
+        {
+            e.printStackTrace();
+        }
+        }
+        catch(InvalidInputException e)
+        {
+            e.printStackTrace();
+        }
+    }
 
 }
