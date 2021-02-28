@@ -54,5 +54,11 @@ public class UserRegistrationTest {
         boolean minOneNumericCaseResult=UserRegistration.minimunOneNumericCaseValidation("Desktop12789");
         assertEquals(true, minOneNumericCaseResult);
     }
+    @Test
+    public void  userMinOneSpecialCase(){
+
+        boolean minOneSpecialCaseResult=UserRegistration.minimunOneSpecialCaseValidation("Desktop@#12789");
+        assertEquals(true, minOneSpecialCaseResult);
+    }
 
 }
