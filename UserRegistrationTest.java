@@ -40,4 +40,12 @@ public class UserRegistrationTest {
         boolean minCharResult=UserRegistration.minimunCharectersValidation("dESKtop89"); 
         assertEquals(true, minCharResult);
     }
+
+    @Test
+    public void  userMinOneUpperCase(){
+
+        boolean minOneUpperCaseResult=UserRegistration.minimunOneUpperCaseValidation("deskTop89");
+        assertEquals(true, minOneUpperCaseResult);
+    }
+
 }
