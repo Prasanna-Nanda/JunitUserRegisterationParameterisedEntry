@@ -17,6 +17,9 @@ public class UserRegistrationTest {
         assertEquals(true, firstNameResult);
     }
 
-
-
+    @Test
+    public void userLastNameTest() {
+        boolean lastNameResult = UserRegistration.lastNameValidation("Prasanna Nanda");
+        assertEquals(true, lastNameResult);
+    }
 }
